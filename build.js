@@ -13,3 +13,12 @@ if (!fs.existsSync(publicDir)) {
 
 // Copy your HTML, CSS, and other assets to the public directory
 fs.copyFileSync("index.html", path.join(publicDir, "index.html"));
+fs.copyFileSync(
+  "/assests/img/bg-signup.jpg",
+  path.join(publicDir, "/assests/img/bg-signup.jpg")
+);
+fs.copyFileSync(
+  "/assests/favicon.ico",
+  path.join(publicDir, "/assests/favicon.ico")
+);
+fs.copyFileSync("/css/styles.css", path.join(publicDir, "/css/styles.css"));

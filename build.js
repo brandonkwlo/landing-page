@@ -30,6 +30,6 @@ copyRecursive("assets", path.join(publicDir, "assets"));
 fs.copyFileSync("index.html", path.join(publicDir, "index.html"));
 
 // Replace PostHog API key in index.html
-let html = fs.readFileSync(path.join(publicDir, "index.html"), "utf8");
+const html = fs.readFileSync("index.html", "utf8");
 const newHtml = html.replace("%POSTHOG_API_KEY%", process.env.POSTHOG_API_KEY);
-fs.writeFileSync(path.join(publicDir, "index.html"), newHtml);
+fs.writeFileSync("index.html", newHtml);
